@@ -1,24 +1,30 @@
-import save_date from './save_the_date.png';
 import CountdownTimer from './components/Countdown/CountdownTimer';
 import './App.css';
 import './components/Countdown/Countdown.css'
 
 const WEDDING_TIME = new Date(2024, 10, 5, 18, 0);
-const NOW_IN_MS = new Date().getTime();
 
-const date = NOW_IN_MS + WEDDING_TIME;
+const date = WEDDING_TIME;
 
-function App() {
+export function App() {
   return (
     <div className="App">
       {/* <header className="App-header"> */}
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <img src={save_date} className="save-date" alt="save_the_date" />
+      <main>
+        <p className='title-text'>Save</p>
+        <p className='title-text'>the date</p>
+        <p className='name-date'>Alberto & Sara</p>
+        <p className='name-date'>05 | 10 | 24</p>
+      </main>
       {/* </header> */}
-
-    <CountdownTimer targetDate={date} />
-  </div>
+    </div>
   );
 }
 
-export default App;
+export function Footer() {
+  return (
+    <footer>
+      <CountdownTimer targetDate={date} />
+    </footer>
+  )
+}

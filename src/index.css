@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'Sisterhood';
+  src: local('Sisterhood'), url(./fonts/Sisterhood.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'BodoniflfRoman';
+  src: local('BodoniflfRoman'), url(./fonts/BodoniflfRoman-vmAD.ttf) format('truetype');
+}

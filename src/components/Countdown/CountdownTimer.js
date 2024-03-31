@@ -5,7 +5,7 @@ import { useCountdown } from './useCountdown';
 const ExpiredNotice = () => {
   return (
     <div className="expired-notice">
-      <span>Llegado el día es!!!</span>
+      <h1>Llegado el día es!!!</h1>
     </div>
   );
 };
