@@ -2,7 +2,7 @@ import CountdownTimer from './components/Countdown/CountdownTimer';
 import './App.css';
 import './components/Countdown/Countdown.css'
 
-const WEDDING_TIME = new Date(2024, 10, 5, 18, 0);
+const WEDDING_TIME = new Date(2024, 9, 5, 18, 0);
 
 const date = WEDDING_TIME;
 
