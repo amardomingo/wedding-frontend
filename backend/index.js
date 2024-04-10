@@ -16,18 +16,17 @@ const PORT = process.env.PORT || 3001;
 //     auth: authClient,
 // });
 
-// middleware for exposing data on req.body
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-app.post('/rsvp', async (req, res) => {
+app.get('/health', (req, res) =>{
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ status: 'ok' }))
+})
+
+app.post('/rsvp', (req, res) => {
     console.log(req.body);
-    res.write('<h1> Registration Successfull :-) </h1>');
-    res.write('<p> Name : </h1>' + req.body.name);
-    res.write('<p> Acompañantes : </h1>' + req.body.acompanante);
-    res.write('<p> Preferencias alimenticias : </h1>' + req.body.preferencias);
-    res.write('<p> Necesitas alojamiento : </h1>' + req.body.alojamiento);
-    res.write('<p> Necesitas autobús : </h1>' + req.body.autobus);
-    res.write('<p> Contacto : </h1>' + req.body.contacto);
+    console.log(req.body.name)
+    res.write("ok")
     res.end();
 })
 
