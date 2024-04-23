@@ -1,9 +1,9 @@
-import "./Rsvp.css";
-import avatar from "./avatar.png";
-import React, { Component } from "react";
+import "./RSVP.css";
+import avatar from "../../assets/avatar.png";
+import { Component } from "react";
 import axios from "axios";
 
-export default class Rsvp extends Component {
+export default class RSVP extends Component {
   constructor(props) {
     super(props);
 
