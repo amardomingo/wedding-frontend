@@ -1,5 +1,4 @@
-import { Route, Routes } from "react-router-dom";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Navigation from "./components/Navigation";
 import RSVP from "./components/RSVP";
@@ -11,10 +10,10 @@ const App = () => {
   return (
     <>
       <main className="App">
-        <Navigation />
         <BrowserRouter>
+        <Navigation />
           <Routes>
-            <Route exac path={"/rsvp"} component={RSVP} />
+            <Route exac path={"/rsvp"} element={<RSVP/>} />
           </Routes>
         </BrowserRouter>
       </main>
