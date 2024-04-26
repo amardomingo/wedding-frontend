@@ -1,0 +1,14 @@
+/* .footer {
+  background-color: #3d3c3c;
+  font-family: "BodoniflfRoman";
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: end;
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+    &:nth-child(3) {
+      font-size: 1rem;
+    }
+  }
+} */
