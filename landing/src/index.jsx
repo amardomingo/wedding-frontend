@@ -8,5 +8,5 @@ root.render(
   <React.StrictMode>
     <App />
     <Footer />
-  </React.StrictMode>
+  </React.StrictMode>,
 );

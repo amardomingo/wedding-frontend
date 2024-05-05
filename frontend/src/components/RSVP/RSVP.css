@@ -12,8 +12,8 @@
     justify-content: center;
     align-items: center;
     padding: 10px;*/
-    /* background: linear-gradient(135deg, cyan, #71b7e6, #9b59b6, tomato); */
-  /*}
+/* background: linear-gradient(135deg, cyan, #71b7e6, #9b59b6, tomato); */
+/*}
   
   .avatar {
     height: 30%;
@@ -26,8 +26,8 @@
   .container {
     max-width: 700px;
     width: 100%;*/
-    /* background-color: #fff; */
-    /*position: relative;
+/* background-color: #fff; */
+/*position: relative;
     top: 50px;
     padding: 25px 30px;
     border-radius: 5px;
@@ -50,8 +50,8 @@
     height: 3px;
     width: 30px;
     border-radius: 5px;*/
-    /* background: linear-gradient(135deg, cyan, #71b7e6, #9b59b6, tomato); */
-  /*}
+/* background: linear-gradient(135deg, cyan, #71b7e6, #9b59b6, tomato); */
+/*}
   
   .content form .user-details {
     display: flex;
@@ -77,8 +77,8 @@
   .user-details .input-box input {
     background: transparent;
     border-style: solid;*/
-    /* border-color: linear-gradient(135deg, cyan, #71b7e6, #9b59b6, tomato); */
-    /*border-right: none;
+/* border-color: linear-gradient(135deg, cyan, #71b7e6, #9b59b6, tomato); */
+/*border-right: none;
     border-top: none;
     border-left: none;
     height: 45px;
@@ -95,8 +95,8 @@
   .user-details .input-box input:valid {
     background: transparent;
     border-style: solid;*/
-    /* border-color: linear-gradient(135deg, cyan, #71b7e6, #9b59b6, tomato); */
-   /* border-top: none;
+/* border-color: linear-gradient(135deg, cyan, #71b7e6, #9b59b6, tomato); */
+/* border-top: none;
     border-right: none;
     border-bottom: none;
   }
@@ -135,13 +135,13 @@
     transition: all 0.3s ease;
     background: linear-gradient(135deg, cyan, #71b7e6, #9b59b6, tomato); 
   }*/
-  
-  /* form .button input:hover { */
-    /* transform: scale(0.99); */
-    /* background: linear-gradient(-135deg, tomato, #71b7e6, #9b59b6, cyan); */
-  /* } */
-  
-  /* select {
+
+/* form .button input:hover { */
+/* transform: scale(0.99); */
+/* background: linear-gradient(-135deg, tomato, #71b7e6, #9b59b6, cyan); */
+/* } */
+
+/* select {
     margin-bottom: 10px;
     margin-top: 10px;
   }
@@ -175,4 +175,3 @@
       flex-direction: column;
     }
   } */
-  

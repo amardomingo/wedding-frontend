@@ -1,9 +1,9 @@
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./Navigation.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Navigation.css';
 
 function Navigation() {
   return (
@@ -15,6 +15,7 @@ function Navigation() {
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/rsvp">RSVP</Nav.Link>
+            <Nav.Link href="/location">Localización</Nav.Link>
           </Nav>
         </Container>
       </Navbar.Collapse>

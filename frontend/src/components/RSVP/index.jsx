@@ -1,17 +1,17 @@
-import "./RSVP.css";
-import avatar from "../../assets/avatar.png";
-import axios from "axios";
-import { useState } from "react";
+import './RSVP.css';
+import avatar from '../../assets/avatar.png';
+import axios from 'axios';
+import { useState } from 'react';
 
 const RSVP = () => {
   // Define state variables to hold form data
   const [formData, setFormData] = useState({
-    nombre: "",
-    acompanante: "",
-    preferencias: "",
-    alojamiento: "",
-    autobus: "",
-    contacto: "",
+    nombre: '',
+    acompanante: '',
+    preferencias: '',
+    alojamiento: '',
+    autobus: '',
+    contacto: ''
   });
 
   // Handle form input changes
@@ -19,7 +19,7 @@ const RSVP = () => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value,
+      [name]: value
     });
   };
 
@@ -27,7 +27,7 @@ const RSVP = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // You can handle form submission here, e.g., send form data to server
-    const base_url = "http://127.0.0.1:3001/rsvp";
+    const base_url = 'http://127.0.0.1:3001/rsvp';
     axios
       .post(base_url, formData)
       .then((response) => {
@@ -41,12 +41,12 @@ const RSVP = () => {
     console.log(JSON.stringify(formData));
     // Optionally, you can reset form fields after submission
     setFormData({
-      nombre: "",
-      acompanante: "",
-      preferencias: "",
-      alojamiento: "",
-      autobus: "",
-      contacto: "",
+      nombre: '',
+      acompanante: '',
+      preferencias: '',
+      alojamiento: '',
+      autobus: '',
+      contacto: ''
     });
   };
 
@@ -95,29 +95,21 @@ const RSVP = () => {
             </div>
             <div className="input-box">
               <label className="details">Necesitas alojamiento</label>
-              <select
-                className="inputbox"
-                name="alojamiento"
-                onChange={handleInputChange}
-              >
+              <select className="inputbox" name="alojamiento" onChange={handleInputChange}>
                 <option value="SI"> SI </option>
                 <option defaultValue value="NO">
-                  {" "}
-                  NO{" "}
+                  {' '}
+                  NO{' '}
                 </option>
               </select>
             </div>
             <div className="input-box">
               <label className="details">Necesitas autobús</label>
-              <select
-                className="inputbox"
-                name="autobus"
-                onChange={handleInputChange}
-              >
+              <select className="inputbox" name="autobus" onChange={handleInputChange}>
                 <option value="SI"> SI </option>
                 <option defaultValue value="NO">
-                  {" "}
-                  NO{" "}
+                  {' '}
+                  NO{' '}
                 </option>
               </select>
             </div>

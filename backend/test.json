@@ -1,9 +1,9 @@
 {
-    "Name": "Jane",
-    "Apellidos": "Doe",
-    "Contacto": "12345678",
-    "Acompanante": "",
-    "Autobus": "SI",
-    "Alojamiento": "NO",
-    "Preferencias": ""
+  "Name": "Jane",
+  "Apellidos": "Doe",
+  "Contacto": "12345678",
+  "Acompanante": "",
+  "Autobus": "SI",
+  "Alojamiento": "NO",
+  "Preferencias": ""
 }
