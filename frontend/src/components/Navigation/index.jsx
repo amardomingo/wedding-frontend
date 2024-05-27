@@ -13,8 +13,9 @@ function Navigation() {
         <Navbar.Brand href="/">A & S</Navbar.Brand>
         <Container>
           <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/rsvp">RSVP</Nav.Link>
+            <Nav.Link href="/">Principal</Nav.Link>
+            <Nav.Link href="/rsvp">Formulario</Nav.Link>
+            <Nav.Link href="/location">Localización</Nav.Link>
           </Nav>
         </Container>
       </Navbar.Collapse>
