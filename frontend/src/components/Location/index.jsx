@@ -1,6 +1,5 @@
-import {APIProvider, Map, AdvancedMarker, Pin, MapControl, ControlPosition} from '@vis.gl/react-google-maps';
-
-const key = 'TO_BE_REPLACED';
+import {APIProvider, Map, AdvancedMarker, Pin} from '@vis.gl/react-google-maps';
+import { API_KEY } from './secrets';
 
 const Location = () => (
   <APIProvider apiKey={API_KEY} libraries={['marker']}>
