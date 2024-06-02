@@ -1,6 +1,8 @@
 import "./RSVP.css";
 import axios from "axios";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 
 const RSVP = () => {
   // Define state variables to hold form data
@@ -76,54 +78,111 @@ const RSVP = () => {
     <div className="form-container">
       <h2>Formulario de Asistencia</h2>
       <form onSubmit={handleSubmit}>
-      <div>
+        <div>
           <label>Nombre y Apellidos:</label>
-          <input type="text" name="nombre" placeholder="Introduce tu nombre y apellidos" value={formData.nombre} onChange={handleChange} required />
+          <input
+            type="text"
+            name="nombre"
+            placeholder="Introduce tu nombre y apellidos"
+            value={formData.nombre}
+            onChange={handleChange}
+            required
+          />
         </div>
         <div>
           <label>Contacto:</label>
-          <input type="text" name="contacto" placeholder="email o número de contacto" value={formData.contacto} onChange={handleChange} required/>
+          <input
+            type="text"
+            name="contacto"
+            placeholder="email o número de contacto"
+            value={formData.contacto}
+            onChange={handleChange}
+            required
+          />
         </div>
         <div>
           <label>Alergias:</label>
-          <input type="text" name="alergias" placeholder="Preferencias alimenticias / alergias / intolerancias" value={formData.alergias} onChange={handleChange} />
+          <input
+            type="text"
+            name="alergias"
+            placeholder="Preferencias alimenticias / alergias / intolerancias"
+            value={formData.alergias}
+            onChange={handleChange}
+          />
         </div>
         <div>
           <label>Alojamiento:</label>
-          <select name="alojamiento" value={formData.alojamiento} onChange={handleChange}>
+          <select
+            name="alojamiento"
+            value={formData.alojamiento}
+            onChange={handleChange}
+          >
             <option value="si">Sí</option>
             <option value="no">No</option>
           </select>
         </div>
         <div>
           <label>Autobús:</label>
-          <select name="autobus" value={formData.autobus} onChange={handleChange}>
+          <select
+            name="autobus"
+            value={formData.autobus}
+            onChange={handleChange}
+          >
             <option value="si">Sí</option>
             <option value="no">No</option>
           </select>
         </div>
         <div>
-          <label>Domingo:</label>
-          <select name="domingo" value={formData.domingo} onChange={handleChange}>
-            <option value="si">Sí</option>
-            <option value="no">No</option>
-          </select>
+        <div className="label-container">
+            <label>Domingo:</label>
+            <div className="tooltip">
+              <FontAwesomeIcon icon={faInfoCircle} className="info-icon" />
+              <span className="tooltip-text">La actividad del domingo incluye una excursión y un almuerzo.</span>
+            </div>
+          </div>
+          <div className="select-container">
+            <select name="domingo" value={formData.domingo} onChange={handleChange}>
+              <option value="si">Sí</option>
+              <option value="no">No</option>
+            </select>
+          </div>
         </div>
-        <button type="button" onClick={addAcompanante}>Añadir Acompañante</button>
+        <button type="button" onClick={addAcompanante}>
+          Añadir Acompañante
+        </button>
         {formData.acompanantes.map((acompanante, index) => (
           <div className="acompanante-container" key={index}>
             <h4>Acompañante {index + 1}</h4>
             <div>
               <label>Nombre y Apellidos:</label>
-              <input type="text" name="nombre" placeholder="Introduce tu nombre" value={acompanante.nombre} onChange={(e) => handleAcompananteChange(index, e)} required/>
+              <input
+                type="text"
+                name="nombre"
+                placeholder="Introduce tu nombre"
+                value={acompanante.nombre}
+                onChange={(e) => handleAcompananteChange(index, e)}
+                required
+              />
             </div>
             <div>
               <label>Alergias:</label>
-              <input type="text" name="alergias" placeholder="Preferencias alimenticias / alergias / intolerancias" value={acompanante.alergias} onChange={(e) => handleAcompananteChange(index, e)} required/>
+              <input
+                type="text"
+                name="alergias"
+                placeholder="Preferencias alimenticias / alergias / intolerancias"
+                value={acompanante.alergias}
+                onChange={(e) => handleAcompananteChange(index, e)}
+                required
+              />
             </div>
             <div>
               <label>Menú:</label>
-              <select name="menu" value={acompanante.menu} onChange={(e) => handleAcompananteChange(index, e)} required>
+              <select
+                name="menu"
+                value={acompanante.menu}
+                onChange={(e) => handleAcompananteChange(index, e)}
+                required
+              >
                 <option value="infantil">Infantil</option>
                 <option value="adulto">Adulto</option>
                 <option value="vegano">Vegano</option>
@@ -131,7 +190,9 @@ const RSVP = () => {
             </div>
           </div>
         ))}
-        <button className="button-submit" type="submit">Enviar</button>
+        <button className="button-submit" type="submit">
+          Enviar
+        </button>
       </form>
     </div>
   );
