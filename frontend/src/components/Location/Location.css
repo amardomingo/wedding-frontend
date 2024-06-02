@@ -36,7 +36,7 @@ p {
 /* Contenedor para centrar todo */
 .center-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -46,10 +46,42 @@ p {
   background-color: #323232;
 }
 
+.location-text {
+  text-align: left;
+  flex-direction: column;
+  margin-left: 5vh;
+}
+
+.block-celebration {
+  text-align: left;
+}
+
+.block-location {
+  text-align: left;
+}
+
 .map-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   background-color: #323232;
+}
+
+
+/* vertical mobile display */
+@media only screen and (max-width: 600px) and (orientation: portrait){
+  .center-container {
+    flex-direction: column;
+  }
+  .location-text {
+    margin-left: 1vh;
+  }
+}
+
+/* horizontal mobile display */
+@media only screen and (max-height: 600px) and (orientation: landscape){
+  .center-container {
+    flex-direction: column;
+  }
 }
