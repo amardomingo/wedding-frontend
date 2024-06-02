@@ -1,9 +1,23 @@
 {
-    "Name": "Jane",
+    "Nombre": "Jane",
     "Apellidos": "Doe",
     "Contacto": "12345678",
-    "Acompanante": "",
+    "Acompanantes": [
+        {
+            "Nombre": "Jony",
+            "Apellidos": "Doe",
+            "Alergias": "none",
+            "Menu": "Infantil"
+        },
+        {
+            "Nombre": "Alice",
+            "Apellidos": "Martin",
+            "Alergias": "none",
+            "Menu": "Adulto"
+        }
+    ],
     "Autobus": "SI",
     "Alojamiento": "NO",
-    "Preferencias": ""
+    "Alergias": "",
+    "Domingo": "SI"
 }
