@@ -9,7 +9,7 @@ const Location = () => (
       <p>Ctra. Puente de Arganda a Chinchón, Km 2,5, Camino de Pajares y del Porcal, 460</p>
       <p>28500 Arganda del Rey, Madrid</p>
     </div>
-    <APIProvider apiKey={API_KEY} libraries={['marker']} className='map-container'>
+    <APIProvider apiKey={API_KEY} libraries={['marker']}>
       <Map
         mapId={'7b94c075e1a2dbef'}
         style={{width: '50vw', height: '50vh'}}

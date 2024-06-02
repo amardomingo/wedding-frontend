@@ -1,58 +1,26 @@
-/* .App {
-  text-align: center;
-  max-height: 100vh;
-  margin-top: 5vh;
-  margin-bottom: 0;
+/* Estilos generales para la aplicación */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 85vh;
+  font-family: 'BodoniflfRoman';
+  font-size: 1.25rem;
 }
 
-body{
-  text-align: center;
-  background-color: #323232;
-  color: white;
-} */
+/* Estilos para los componentes del contenido */
+.content {
+  padding: 2rem;
+  color: #FFD700;
+  font-family: 'BodoniflfRoman';
+}
 
-/* vertical mobile display */
-/* @media only screen and (max-width: 600px) and (orientation: portrait){
-  header {
-    font-size: 2rem;
-    text-align: center;
-    max-height: 0vh;
+/* Estilos responsivos */
+@media (max-width: 576px) {
+  .content {
+    padding: 1rem;
   }
-  main {
-    font-size: 1.2rem;
-    text-align: center;
-    max-height: 80vh;
-  }
-  footer {
-    text-align: end;
-    max-height: 20vh;
-  }
-  .show-counter{
-    font-size: 0.85rem !important;
-  }
-} */
 
-/* horizontal mobile display */
-/* @media only screen and (max-height: 600px) and (orientation: landscape){
-  header {
-    font-size: 2rem;
-    text-align: center;
-    max-height: 0vh;
-  }
-  main {
-    font-size: 1.2rem;
-    text-align: center;
-    max-height: 80vh;
-  }
   footer {
-    text-align: end;
-    max-height: 20vh;
+    padding: 0.5rem;
   }
-  .title-text{
-    display: inline;
-    margin-left: 10vh;
-  }
-  .App{
-    margin-top: 2vh;
-  }
-} */
+}

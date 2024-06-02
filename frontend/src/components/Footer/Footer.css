@@ -1,14 +1,35 @@
-/* .footer {
-  background-color: #3d3c3c;
+.footer {
+  background-color: #323232;
   font-family: "BodoniflfRoman";
-  font-size: 1rem;
-  font-weight: 300;
-  text-align: end;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  max-height: 15vh;
+  padding: 1rem;
+  color: #FFD700; /* Color dorado */
+  border-top: 2px solid #FFD700; /* Línea dorada */
+  
   p {
-    margin-top: 0;
-    margin-bottom: 0;
+    background-color: #323232;
+    margin-top: 5px;
+    margin-bottom: 5px;
     &:nth-child(3) {
+      font-size: 1rem;
+      margin-top: 30px;
+    }
+    &:nth-child(4) {
       font-size: 1rem;
     }
   }
-} */
+  
+  a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  a:hover {
+    color: #FFFFFF; /* Blanco al pasar el ratón */
+    text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700; /* Efecto de resplandor dorado */
+  }
+}
