@@ -1,9 +1,55 @@
-/* Always set the map height explicitly to define the size of the div
- * element that contains the map. */
-gmp-map {
-  height: 100vh;
+/* Estilos generales */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
 }
 
+/* Contenedor principal */
+div {
+  text-align: center;
+}
+
+.block-celebration, .block-location {
+  margin: 20px 0;
+  background-color: #323232;
+  color: white;
+}
+
+p {
+  margin: 5px 0;
+}
+
+/* Mapa */
 .map {
-  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* Contenedor para centrar todo */
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #323232;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #323232;
 }
