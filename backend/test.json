@@ -1,23 +1,20 @@
 {
-    "Nombre": "Jane",
-    "Apellidos": "Doe",
-    "Contacto": "12345678",
-    "Acompanantes": [
+    "nombre": "Jane Doe",
+    "contacto": "12345678",
+    "acompanantes": [
         {
-            "Nombre": "Jony",
-            "Apellidos": "Doe",
-            "Alergias": "none",
-            "Menu": "Infantil"
+            "nombre": "Johny Doe",
+            "alergias": "none",
+            "menu": "Infantil"
         },
         {
-            "Nombre": "Alice",
-            "Apellidos": "Martin",
-            "Alergias": "none",
-            "Menu": "Adulto"
+            "nombre": "Alice Martin",
+            "alergias": "none",
+            "menu": "Adulto"
         }
     ],
-    "Autobus": "SI",
-    "Alojamiento": "NO",
-    "Alergias": "",
-    "Domingo": "SI"
+    "autobus": "SI",
+    "alojamiento": "NO",
+    "alergias": "pescado",
+    "domingo": "SI"
 }
