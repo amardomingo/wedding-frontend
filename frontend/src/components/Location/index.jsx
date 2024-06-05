@@ -32,11 +32,11 @@ const Location = () => {
         <h2>Como llegar</h2>
         <h3>En coche</h3>
         <p>Salida 21 de la carretera A-3 en dirección Arganda del Rey</p>
-        <h3>En autobus</h3>
-        <p>Desde la plaza de neptuno en Madrid saldra un autobus hacia el recinto a las 17h</p>
+        <h3>En autobús</h3>
+        <p>Desde la plaza de Neptuno en Madrid saldrá un autobús hacia el recinto a las 17h</p>
       </div>
     </div>
-    <div class="map-container">
+    <div className="map-container">
     <APIProvider apiKey={API_KEY} libraries={['marker']}>
       <Map
         mapId={'7b94c075e1a2dbef'}
