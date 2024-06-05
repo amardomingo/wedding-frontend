@@ -1,6 +1,5 @@
 {
-  "name": "my-wedding-frontend",
-  "version": "1.0.0",
+  "name": "my-wedding-vite",
   "private": true,
   "description": "wedding frontend with vite",
   "author": "Sara Jimenez & Alberto Mardomingo",
@@ -23,6 +22,7 @@
     "prettier"
   ],
   "dependencies": {
+    "@vis.gl/react-google-maps": "^1.0.1",
     "@vitejs/plugin-react": "4.2.1",
     "bootstrap": "5.3.3",
     "react": "18.2.0",
@@ -32,24 +32,24 @@
     "vite": "^5.2.10"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.0.2",
-    "@eslint/js": "^9.1.1",
+    "@eslint/eslintrc": "3.0.2",
+    "@eslint/js": "9.1.1",
     "@primer/octicons-react": "9.4.0",
     "@types/react": "18.2.66",
     "@types/react-dom": "18.2.22",
     "axios": "1.6.8",
     "classnames": "2.5.1",
-    "eslint": "^8.57.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
-    "eslint-plugin-prettier": "^5.1.3",
-    "eslint-plugin-react": "^7.34.1",
-    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint": "8.57.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-jsx-a11y": "6.8.0",
+    "eslint-plugin-prettier": "5.1.3",
+    "eslint-plugin-react": "7.34.1",
+    "eslint-plugin-react-hooks": "4.6.2",
     "eslint-plugin-react-refresh": "0.4.6",
-    "globals": "^15.1.0",
-    "prettier": "^3.2.5",
+    "globals": "15.1.0",
+    "prettier": "3.2.5",
     "react-emoji-render": "2.0.1"
   }
 }
