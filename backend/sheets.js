@@ -18,7 +18,7 @@ export default function insertInvitado(invitadoInfo) {
         invitadoInfo.contacto,
         invitadoInfo.autobus,
         invitadoInfo.alojamiento,
-        invitadoInfo.alergias == "none" ? "" : invitadoInfo.alergias,
+        invitadoInfo.alergias === "none" ? "" : invitadoInfo.alergias,
         "Adulto", // Menu
         invitadoInfo.domingo,
         "", // Acompañante de
@@ -29,7 +29,7 @@ export default function insertInvitado(invitadoInfo) {
             "", //Contacto
             invitadoInfo.autobus,
             invitadoInfo.alojamiento,
-            acompanate.alergias == "none" ? "" : acompanate.alergias,
+            acompanate.alergias === "none" ? "" : acompanate.alergias,
             acompanate.menu,
             invitadoInfo.domingo,
             invitadoInfo.nombre // Acompanante de 
@@ -45,5 +45,5 @@ export default function insertInvitado(invitadoInfo) {
             "majorDimension": "ROWS",
             "values": data
         }
-    })
+    }).then(_ => console.log('Data insert correctly in sheet'))
 }
