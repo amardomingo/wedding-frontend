@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "airbnb",
+    "prettier",
+    "eslint:recommended",
+    "plugin:import/recommended"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "env": {
+    "browser": true,
+    "es2022": true
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error"
+    ]
+  },
+  "overrides": [{
+    "files": [
+      "**/*.jsx"
+    ]
+  }]
+}
