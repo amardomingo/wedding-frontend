@@ -1,17 +1,42 @@
+/* Estilos generales */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+}
+
+/* Contenedor principal */
+div {
+  text-align: center;
+}
+
 .block-celebration, .block-location {
   margin: 20px 0;
   background-color: #323232;
   color: white;
+}
 
-  p {
-    margin: 5px 0;
-  }
+p {
+  margin: 5px 0;
+}
+
+/* Mapa */
+.map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
 }
 
 /* Contenedor para centrar todo */
 .center-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -19,4 +44,44 @@
   padding: 20px;
   box-sizing: border-box;
   background-color: #323232;
+}
+
+.location-text {
+  text-align: left;
+  flex-direction: column;
+  margin-left: 5vh;
+}
+
+.block-celebration {
+  text-align: left;
+}
+
+.block-location {
+  text-align: left;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #323232;
+}
+
+
+/* vertical mobile display */
+@media only screen and (max-width: 600px) and (orientation: portrait){
+  .center-container {
+    flex-direction: column;
+  }
+  .location-text {
+    margin-left: 1vh;
+  }
+}
+
+/* horizontal mobile display */
+@media only screen and (max-height: 600px) and (orientation: landscape){
+  .center-container {
+    flex-direction: column;
+  }
 }
