@@ -7,15 +7,23 @@
   margin: auto;
 }
 
-h2 {
+.h2-form {
   text-align: center;
   color: #FFD700;
   font-size: 2.5em;
   margin-bottom: 20px;
 }
 
+.h3-form {
+  text-align: center;
+  color: #FFD700;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
 label {
   display: block;
+  text-align: left;
   margin-bottom: 5px;
   color:  white;
 }
@@ -26,12 +34,12 @@ input, select {
   margin-bottom: 15px;
   border: none;
   border-radius: 5px;
-  background-color: #333;
+  background-color: #323232;
   color:  white;
 }
 
 button {
-  display: block;
+  display: flex;
   width: 100%;
   padding: 10px;
   background-color: #FFD700;
@@ -40,6 +48,10 @@ button {
   border-radius: 5px;
   font-size: 1em;
   cursor: pointer;
+  max-width: 66vh;
+  justify-content: center;
+  align-items: center;
+  margin-left: 22%;
 }
 
 .button-submit {
@@ -71,29 +83,27 @@ button:hover {
 }
 
 .tooltip {
-  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  font-family: 'BodoniflfRoman', sans-serif;
+  opacity: 0;
+  bottom: 50%;
+  left: 18%;
+  transition: opacity 0.3s ease;
+  background-color: #555;
+  color: #fff;
+}
+
+:has(> .tooltip) {
   position: relative;
 }
 
-.tooltip .tooltip-text {
-  visibility: hidden;
-  width: 200px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 5px;
-  padding: 5px;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%; /* Position the tooltip above the text */
-  left: 50%;
-  margin-left: -100px; /* Center the tooltip */
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.tooltip:hover .tooltip-text {
-  visibility: visible;
+:has(> .tooltip):hover .tooltip {
   opacity: 1;
 }
 
@@ -106,4 +116,35 @@ button:hover {
   display: flex;
   align-items: center;
   margin-bottom: 5px;
+}
+
+.modal-backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #333;
+  padding: 2px;
+  border-radius: 5px;
+  max-width: 70vh;
+  width: 100%;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  float: left;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+}
+
+.modal-content {
+  margin: 2vh 2vh 2vh 2vh;
+  max-width: 66vh;
+  background: #333;
 }

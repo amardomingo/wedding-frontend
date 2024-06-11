@@ -1,6 +1,6 @@
 /* Estilos generales para la barra de navegación */
 .navbar {
-  background-color: #3d3c3c !important;
+  background-color: #323232 !important;
   padding: 0.5rem 1rem;
   border-bottom: 2px solid #FFD700; /* Línea dorada */
 }
@@ -9,7 +9,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   color: #FFD700 !important; /* Color dorado */
-  font-family: 'BodoniflfRoman';
+  font-family: 'BodoniflfRoman', sans-serif;
 }
 .navbar-brand:hover {
   color: #FFFFFF !important; /* Color blanco al pasar el ratón */
@@ -21,7 +21,7 @@
   color: #FFD700 !important; /* Color dorado */
   font-size: 1.1rem;
   font-weight: bold;
-  font-family: 'BodoniflfRoman';
+  font-family: 'BodoniflfRoman', sans-serif;
 }
 
 .nav-link:hover {

@@ -1,0 +1,66 @@
+/* Estilos generales */
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.welcome-page {
+    max-width: 80vw;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #3d3c3c;
+    box-shadow: 0 0 80px rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.welcome-page h1 {
+    text-align: center;
+    color: white;
+}
+
+.welcome-page p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.h2-home {
+    color: white;
+    border-bottom: 2px solid white;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.h3-home {
+    color: white;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos de botón de enlace */
+.welcome-page a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #FFD700;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.welcome-page a:hover {
+    color: #FFFFFF; /* Blanco al pasar el ratón */
+    text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700; /* Efecto de resplandor dorado */
+}
+

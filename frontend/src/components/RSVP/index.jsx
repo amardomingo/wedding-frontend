@@ -1,21 +1,22 @@
-import "./RSVP.css";
-import axios from "axios";
-import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import './RSVP.css';
+import axios from 'axios';
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 const RSVP = () => {
   // Define state variables to hold form data
   const [formData, setFormData] = useState({
-    nombre: "",
-    contacto: "",
+    nombre: '',
+    contacto: '',
     acompanantes: [],
-    alergias: "",
-    alojamiento: "no",
-    autobus: "no",
-    domingo: "no",
+    alergias: '',
+    alojamiento: 'no',
+    autobus: 'no',
+    domingo: 'no',
   });
-
+  const [modalVisible, setModalVisible] = useState(false);
+  const [modalContent, setModalContent] = useState('');
   // Handle form input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -41,7 +42,7 @@ const RSVP = () => {
       ...formData,
       acompanantes: [
         ...formData.acompanantes,
-        { nombre: "", alergias: "", menu: "infantil" },
+        { nombre: '', alergias: '', menu: 'infantil' },
       ],
     });
   };
@@ -50,33 +51,41 @@ const RSVP = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // You can handle form submission here, e.g., send form data to server
-    const base_url = "http://127.0.0.1:3001/rsvp";
+    const base_url = 'http://127.0.0.1:3001/rsvp';
     axios
       .post(base_url, formData)
       .then((response) => {
         console.log(response);
+        setModalContent(response.data.iban);
+        setModalVisible(true);
         // redirección a log satisfactoriamente
       })
       .catch((error) => {
         console.log(error.response);
+        setModalContent("Ha ocurrido un error. Por favor, inténtalo de nuevo.");
+        setModalVisible(true);
         // redirección a un mensaje de error y que lo vuelva a intentar
       });
     console.log(JSON.stringify(formData));
     // Optionally, you can reset form fields after submission
     setFormData({
-      nombre: "",
-      contacto: "",
+      nombre: '',
+      contacto: '',
       acompanantes: [],
-      alergias: "",
-      alojamiento: "",
-      autobus: "",
-      domingo: "",
+      alergias: '',
+      alojamiento: '',
+      autobus: '',
+      domingo: '',
     });
+  };
+
+  const closeModal = () => {
+    setModalVisible(false);
   };
 
   return (
     <div className="form-container">
-      <h2>Formulario de Asistencia</h2>
+      <h2 className="h2-form">Formulario de Asistencia</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label>Nombre y Apellidos:</label>
@@ -133,12 +142,14 @@ const RSVP = () => {
           </select>
         </div>
         <div>
-        <div className="label-container">
+          <div className="label-container">
             <label>Domingo:</label>
-            <div className="tooltip">
-              <FontAwesomeIcon icon={faInfoCircle} className="info-icon" />
-              <span className="tooltip-text">La actividad del domingo incluye una excursión y un almuerzo.</span>
-            </div>
+            <FontAwesomeIcon icon={faInfoCircle} style={{marginLeft: 6}}/>
+            <span className="tooltip">
+              <h3 className="h3-form">Weeding weekend</h3>
+              <p>Desde el Complejo nos ofrecen una comida para el día siguiente de la boda.</p>
+              <p>2 entrantes + BBQ + Paella + Postre + Bebida -{'>'} 43€/persona (IVA no incluido)</p>
+            </span>
           </div>
           <div className="select-container">
             <select name="domingo" value={formData.domingo} onChange={handleChange}>
@@ -194,6 +205,18 @@ const RSVP = () => {
           Enviar
         </button>
       </form>
+      {modalVisible && (
+        <div className="modal-backdrop">
+          <div className="modal">
+            <div className="modal-content">
+              <p>Tus datos han sido recibidos correctamente.</p>
+              <p>El mejor regalo es que paséis este día con nosotros, pero si aún así queréis echarnos una mano, podéis hacerlo aquí:</p>
+              <p>{modalContent}</p>
+            </div>
+            <button onClick={closeModal}>Cerrar</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -1,11 +1,11 @@
 body {
   margin: 0;
-  font-family: 'BodoniflfRoman' !important;
+  font-family: 'BodoniflfRoman', sans-serif !important;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
   padding: 0;
   background-color: #323232;
-  color: #FFD700; 
+  color: white;
 }
 
 @font-face {

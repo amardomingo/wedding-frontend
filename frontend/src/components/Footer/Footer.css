@@ -1,10 +1,10 @@
 .footer {
   background-color: #323232;
-  font-family: "BodoniflfRoman";
+  font-family: "BodoniflfRoman", sans-serif;
   font-size: 1.3rem;
   font-weight: bold;
   text-align: center;
-  max-height: 15vh;
+  max-height: 10vh;
   padding: 1rem;
   color: #FFD700; /* Color dorado */
   border-top: 2px solid #FFD700; /* Línea dorada */
