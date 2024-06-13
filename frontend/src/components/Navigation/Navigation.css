@@ -1,3 +1,53 @@
-/* .navigation {
-  background-color: #364251;
-} */
+/* Estilos generales para la barra de navegación */
+.navbar {
+  background-color: #323232 !important;
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid #FFD700; /* Línea dorada */
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FFD700 !important; /* Color dorado */
+  font-family: 'BodoniflfRoman', sans-serif;
+}
+.navbar-brand:hover {
+  color: #FFFFFF !important; /* Color blanco al pasar el ratón */
+  text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700; /* Efecto de resplandor dorado */
+}
+
+/* Estilos para los enlaces de navegación */
+.nav-link {
+  color: #FFD700 !important; /* Color dorado */
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: 'BodoniflfRoman', sans-serif;
+}
+
+.nav-link:hover {
+  color: #FFFFFF !important; /* Color blanco al pasar el ratón */
+  text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700; /* Efecto de resplandor dorado */
+}
+
+/* Estilos para el contenedor */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilos para las pantallas pequeñas */
+@media (max-width: 576px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  .nav-link {
+    margin-left: 0;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+  }
+}
+
