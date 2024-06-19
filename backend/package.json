@@ -9,12 +9,25 @@
     "test": "npm run test"
   },
   "keywords": [
-    "node"
+    "node",
+    "eslint",
+    "prettier",
+    "express",
+    "googleapis"
   ],
   "author": "Sara Jimenez & Alberto Mardomingo",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.19.2",
-    "googleapis": "^134.0.0"
+    "express": "4.19.2",
+    "googleapis": "134.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "3.1.0",
+    "@eslint/js": "9.5.0",
+    "eslint": "8.57.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "globals": "15.6.0"
   }
 }
