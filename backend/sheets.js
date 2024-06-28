@@ -28,7 +28,7 @@ export default function insertInvitado(invitadoInfo) {
   for (const acompanate of invitadoInfo.acompanantes) {
     data.push([
       acompanate.nombre,
-      '', //Contacto
+      '', // Contacto
       invitadoInfo.autobus,
       invitadoInfo.alojamiento,
       acompanate.alergias === 'none' ? '' : acompanate.alergias,
@@ -49,5 +49,5 @@ export default function insertInvitado(invitadoInfo) {
         values: data,
       },
     })
-    .then((r) => console.log('Data insert correctly in sheet'));
+    .then((r) => console.log('Data insert correctly in sheet. %s', r));
 }
