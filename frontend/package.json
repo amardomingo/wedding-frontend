@@ -10,28 +10,28 @@
     "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.5.2",
-    "@fortawesome/free-solid-svg-icons": "^6.5.2",
-    "@fortawesome/react-fontawesome": "^0.2.2",
-    "@vis.gl/react-google-maps": "^1.0.1",
-    "bootstrap": "^5.3.3",
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.10.2",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.3"
+    "@fortawesome/fontawesome-svg-core": "6.5.2",
+    "@fortawesome/free-solid-svg-icons": "6.5.2",
+    "@fortawesome/react-fontawesome": "0.2.2",
+    "@vis.gl/react-google-maps": "1.0.1",
+    "bootstrap": "5.3.3",
+    "react": "18.2.0",
+    "react-bootstrap": "2.10.2",
+    "react-dom": "18.2.0",
+    "react-router-dom": "6.22.3"
   },
   "devDependencies": {
     "@primer/octicons-react": "9.4.0",
-    "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.22",
-    "@vitejs/plugin-react": "^4.2.1",
+    "@types/react": "18.2.66",
+    "@types/react-dom": "18.2.22",
+    "@vitejs/plugin-react": "4.2.1",
     "axios": "1.6.8",
     "classnames": "2.5.1",
-    "eslint": "^8.57.0",
-    "eslint-plugin-react": "^7.34.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.6",
-    "react-emoji-render": "^2.0.1",
-    "vite": "^5.2.0"
+    "eslint": "8.57.0",
+    "eslint-plugin-react": "7.34.1",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-react-refresh": "0.4.6",
+    "react-emoji-render": "2.0.1",
+    "vite": "5.2.0"
   }
 }
