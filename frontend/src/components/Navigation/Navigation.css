@@ -1,33 +1,37 @@
 /* Estilos generales para la barra de navegación */
 .navbar {
   background-color: #323232 !important;
-  border-bottom: 2px solid #FFD700; /* Línea dorada */
+  border-bottom: 2px solid #ffd700; /* Línea dorada */
   padding: 0.5rem 1rem;
 }
 
 .navbar-brand {
-  color: #FFD700 !important; /* Color dorado */
+  color: #ffd700 !important; /* Color dorado */
   font-family: 'BodoniflfRoman', sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
 .navbar-brand:hover {
-  color: #FFFFFF !important; /* Color blanco al pasar el ratón */
-  text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700; /* Efecto de resplandor dorado */
+  color: #ffffff !important; /* Color blanco al pasar el ratón */
+  text-shadow:
+    0 0 5px #ffd700,
+    0 0 10px #ffd700; /* Efecto de resplandor dorado */
 }
 
 /* Estilos para los enlaces de navegación */
 .nav-link {
-  color: #FFD700 !important; /* Color dorado */
+  color: #ffd700 !important; /* Color dorado */
   font-family: 'BodoniflfRoman', sans-serif;
   font-size: 1.1rem;
   font-weight: bold;
 }
 
 .nav-link:hover {
-  color: #FFFFFF !important; /* Color blanco al pasar el ratón */
-  text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700; /* Efecto de resplandor dorado */
+  color: #ffffff !important; /* Color blanco al pasar el ratón */
+  text-shadow:
+    0 0 5px #ffd700,
+    0 0 10px #ffd700; /* Efecto de resplandor dorado */
 }
 
 /* Estilos para el contenedor */

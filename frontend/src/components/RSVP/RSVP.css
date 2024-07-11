@@ -9,21 +9,21 @@
 }
 
 .h2-form {
-  color: #FFD700;
+  color: #ffd700;
   font-size: 2.5em;
   margin-bottom: 20px;
   text-align: center;
 }
 
 .h3-form {
-  color: #FFD700;
+  color: #ffd700;
   font-size: 2em;
   margin-bottom: 20px;
   text-align: center;
 }
 
 .acompanante-container {
-  border: 1px solid #FFD700;
+  border: 1px solid #ffd700;
   border-radius: 5px;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -31,12 +31,12 @@
 }
 
 .acompanante-container h4 {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 .button-rsvp {
   align-items: center;
-  background-color: #FFD700;
+  background-color: #ffd700;
   border: none;
   border-radius: 5px;
   color: #000;
@@ -54,7 +54,8 @@
   margin-top: 20px;
 }
 
-input, select {
+input,
+select {
   background-color: #323232;
   border: none;
   border-radius: 5px;
@@ -131,7 +132,7 @@ label {
   font-size: 1rem;
   left: 18%;
   opacity: 0;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   pointer-events: none;
   position: absolute;
   transition: opacity 0.3s ease;
@@ -141,7 +142,7 @@ label {
 }
 
 button:hover {
-  background-color: #FFD700;
+  background-color: #ffd700;
   transform: scale(1.05);
 }
 
@@ -173,7 +174,7 @@ button:hover {
     width: 90vw;
   }
 
-  .button-rsvp{
+  .button-rsvp {
     margin-left: 0;
   }
 
