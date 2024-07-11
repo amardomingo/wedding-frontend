@@ -3,7 +3,8 @@ div {
   text-align: center;
 }
 
-.block-celebration, .block-location {
+.block-celebration,
+.block-location {
   background-color: #323232;
   color: white;
   margin: 20px 0;
@@ -30,14 +31,14 @@ div {
 }
 
 .h2-location {
-  color: #FFD700;
+  color: #ffd700;
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
 }
 
 .h3-location {
-  color: #FFD700;
+  color: #ffd700;
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;

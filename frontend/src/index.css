@@ -11,5 +11,7 @@ body {
 
 @font-face {
   font-family: 'BodoniflfRoman';
-  src: local('BodoniflfRoman'), url(./fonts/BodoniflfRoman-vmAD.ttf) format('truetype');
+  src:
+    local('BodoniflfRoman'),
+    url(./fonts/BodoniflfRoman-vmAD.ttf) format('truetype');
 }

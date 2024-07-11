@@ -1,197 +1,202 @@
 /* Estilos generales */
 body {
-	background-color: #f4f4f4;
-	color: #333;
-	line-height: 1.6;
-	margin: 0;
-	padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
 .home {
-	display: grid;
-	gap: 20px;
-	grid-template-columns: 1fr 2fr;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 2fr;
 }
 
 .image img {
-	display: flex;
-	height: auto;
-	margin: 20px 0 20px 20px;
-	max-height: 70vh;
-	max-width: 50vw;
+  display: flex;
+  height: auto;
+  margin: 20px 0 20px 20px;
+  max-height: 70vh;
+  max-width: 50vw;
 }
 
 .content {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	justify-items: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
 }
 
 .welcome-page {
-	max-width: 50vw;
+  max-width: 50vw;
 
-	h1 {
-		color: white;
-		font-weight: bold;
-		text-align: center;
-	}
+  h1 {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
 
-	p {
-		font-size: 1.2rem;
-		margin: 1rem 0;
-	}
+  p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
 }
 
 .details-buttons {
-	align-items: center;
-	justify-items: center;
-	padding-bottom: 2rem;
+  align-items: center;
+  justify-items: center;
+  padding-bottom: 2rem;
 
-	.accordion-button {
-		background: transparent;
-		border: 1px solid #FFD700;
-		border-radius: 8px;
-		box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
-		cursor: pointer;
-		margin-top: 20px;
-		transition: background-color 0.3s ease;
-		width: 35vw;
-	}
+  .accordion-button {
+    background: transparent;
+    border: 1px solid #ffd700;
+    border-radius: 8px;
+    box-shadow:
+      rgba(60, 64, 67, 0.3) 0 1px 2px 0,
+      rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    width: 35vw;
+  }
 
-	.faq-section {
-		align-items: center;
-		display: flex;
-		justify-content: space-between;
-		min-height: 4vw;
-		text-align: left;
-	}
+  .faq-section {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    min-height: 4vw;
+    text-align: left;
+  }
 
-	.accordion-content {
-		overflow: hidden;
-		transition: max-height 0.6s ease;
+  .accordion-content {
+    overflow: hidden;
+    transition: max-height 0.6s ease;
 
-		a {
-			border-radius: 4px;
-			color: #FFD700;
-			display: inline-block;
-			margin-top: 1rem;
-			text-decoration: none;
-			transition: background-color 0.3s ease;
-		}
+    a {
+      border-radius: 4px;
+      color: #ffd700;
+      display: inline-block;
+      margin-top: 1rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
 
-		a:hover {
-			color: #FFFFFF; /* Blanco al pasar el ratón */
-			text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700; /* Efecto de resplandor dorado */
-		}
-	}
+    a:hover {
+      color: #ffffff; /* Blanco al pasar el ratón */
+      text-shadow:
+        0 0 5px #ffd700,
+        0 0 10px #ffd700; /* Efecto de resplandor dorado */
+    }
+  }
 
-	.answer-divider {
-		border-top: 5px solid #FFD700;
-		padding-top: 10px;
-	}
+  .answer-divider {
+    border-top: 5px solid #ffd700;
+    padding-top: 10px;
+  }
 
-	.h2-home {
-		font-weight: bold;
-		margin-left: 20px;
-		margin-right: auto;
-	}
+  .h2-home {
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: auto;
+  }
 
-	.h3-home {
-		font-weight: bold;
-		margin-bottom: 5px;
-		margin-top: 10px;
-	}
+  .h3-home {
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
 
-	.question-icon {
-		background: none;
-		border: none;
-		color: #FFD700;
-		cursor: pointer;
-		font-size: 17px;
-		margin-left: auto;
-		margin-right: 20px;
-		transition: transform 0.3s ease;
-	}
+  .question-icon {
+    background: none;
+    border: none;
+    color: #ffd700;
+    cursor: pointer;
+    font-size: 17px;
+    margin-left: auto;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+  }
 
-	.question-icon .rotate {
-		transform: rotate(45deg);
-	}
+  .question-icon .rotate {
+    transform: rotate(45deg);
+  }
 }
 
 /* vertical mobile display */
 @media only screen and (max-width: 600px) and (orientation: portrait) {
-	html {
-		overflow-x: hidden;
-		width: 100vw;
+  html {
+    overflow-x: hidden;
+    width: 100vw;
 
-		body {
-			overflow-x: hidden;
-		}
-	}
+    body {
+      overflow-x: hidden;
+    }
+  }
 
-	.home {
-		align-items: center;
-		gap: 10px;
-		grid-template-columns: 1fr;
-		grid-template-rows: auto;
-	}
+  .home {
+    align-items: center;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
 
-	.image,
-	.welcome-page,
-	.accordion-buttons {
-		grid-column: 1 / 2;
-	}
+  .image,
+  .welcome-page,
+  .accordion-buttons {
+    grid-column: 1 / 2;
+  }
 
-	.image img {
-		align-items: center;
-		margin-left: 3vw;
-		margin-right: 3vw;
-		max-height: 90vh;
-		max-width: 95vh;
-		object-fit: contain;
-		padding-left: 1vw;
-		width: 90vw;
-	}
+  .image img {
+    align-items: center;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    max-height: 90vh;
+    max-width: 95vh;
+    object-fit: contain;
+    padding-left: 1vw;
+    width: 90vw;
+  }
 
-	.welcome-page, .details-buttons {
-		align-items: center;
-		margin-left: 2vw;
-		max-width: 95vw;
+  .welcome-page,
+  .details-buttons {
+    align-items: center;
+    margin-left: 2vw;
+    max-width: 95vw;
 
-		.accordion-button {
-			margin-left: 2vw;
-			margin-right: 2vw;
-			width: 85vw;
-		}
-	}
+    .accordion-button {
+      margin-left: 2vw;
+      margin-right: 2vw;
+      width: 85vw;
+    }
+  }
 }
 
 /* horizontal mobile display */
 @media only screen and (max-height: 600px) and (orientation: landscape) {
-	.home {
-		gap: 10px;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: auto auto;
-	}
+  .home {
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
 
-	.image {
-		grid-column: 1 / 2;
-	}
+  .image {
+    grid-column: 1 / 2;
+  }
 
-	.welcome-page {
-		grid-column: 2 / 2;
-	}
+  .welcome-page {
+    grid-column: 2 / 2;
+  }
 
-	.details-buttons {
-		display: flex;
-		flex-wrap: wrap;
-		grid-row: 1 / 1;
-		justify-content: space-between;
+  .details-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    grid-row: 1 / 1;
+    justify-content: space-between;
 
-		.accordion-button {
-			flex: 1 1 45%;
-			margin: 10px;
-		}
-	}
+    .accordion-button {
+      flex: 1 1 45%;
+      margin: 10px;
+    }
+  }
 }

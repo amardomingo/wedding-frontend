@@ -1,8 +1,8 @@
 .footer {
   background-color: #323232;
-  border-top: 2px solid #FFD700; /* Línea dorada */
-  color: #FFD700; /* Color dorado */
-  font-family: "BodoniflfRoman", sans-serif;
+  border-top: 2px solid #ffd700; /* Línea dorada */
+  color: #ffd700; /* Color dorado */
+  font-family: 'BodoniflfRoman', sans-serif;
   font-size: 1.3rem;
   font-weight: bold;
   max-height: 10vh;
@@ -10,14 +10,16 @@
   text-align: center;
 
   a {
-    color: #FFD700;
+    color: #ffd700;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
   }
 
   a:hover {
-    color: #FFFFFF; /* Blanco al pasar el ratón */
-    text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700; /* Efecto de resplandor dorado */
+    color: #ffffff; /* Blanco al pasar el ratón */
+    text-shadow:
+      0 0 5px #ffd700,
+      0 0 10px #ffd700; /* Efecto de resplandor dorado */
   }
 
   p {

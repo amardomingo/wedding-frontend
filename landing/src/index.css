@@ -14,10 +14,14 @@ code {
 
 @font-face {
   font-family: 'Sisterhood';
-  src: local('Sisterhood'), url(./fonts/Sisterhood.ttf) format('truetype');
+  src:
+    local('Sisterhood'),
+    url(./fonts/Sisterhood.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'BodoniflfRoman';
-  src: local('BodoniflfRoman'), url(./fonts/BodoniflfRoman-vmAD.ttf) format('truetype');
+  src:
+    local('BodoniflfRoman'),
+    url(./fonts/BodoniflfRoman-vmAD.ttf) format('truetype');
 }

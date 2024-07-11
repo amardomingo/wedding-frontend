@@ -1,7 +1,8 @@
-import Octicon, { MarkGithub } from "@primer/octicons-react";
-import Emoji from "react-emoji-render";
+import Octicon, { MarkGithub } from '@primer/octicons-react';
+import Emoji from 'react-emoji-render';
+import React from 'react';
 
-import "./Footer.css";
+import './Footer.css';
 
 const Footer = () => {
   return (

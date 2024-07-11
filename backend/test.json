@@ -1,20 +1,20 @@
 {
-    "nombre": "Jane Doe",
-    "contacto": "12345678",
-    "acompanantes": [
-        {
-            "nombre": "Johny Doe",
-            "alergias": "none",
-            "menu": "Infantil"
-        },
-        {
-            "nombre": "Alice Martin",
-            "alergias": "none",
-            "menu": "Adulto"
-        }
-    ],
-    "autobus": "SI",
-    "alojamiento": "NO",
-    "alergias": "pescado",
-    "domingo": "SI"
+  "nombre": "Jane Doe",
+  "contacto": "12345678",
+  "acompanantes": [
+    {
+      "nombre": "Johny Doe",
+      "alergias": "none",
+      "menu": "Infantil"
+    },
+    {
+      "nombre": "Alice Martin",
+      "alergias": "none",
+      "menu": "Adulto"
+    }
+  ],
+  "autobus": "SI",
+  "alojamiento": "NO",
+  "alergias": "pescado",
+  "domingo": "SI"
 }
