@@ -88,68 +88,63 @@ const RSVP = () => {
       <h2 className="h2-form">Formulario de Asistencia</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Nombre y Apellidos:</label>
-          <input
+          <label>Nombre y Apellidos:<input
             type="text"
             name="nombre"
             placeholder="Introduce tu nombre y apellidos"
             value={formData.nombre}
             onChange={handleChange}
             required
-          />
+          /></label>
         </div>
         <div>
-          <label>Contacto:</label>
-          <input
+          <label>Contacto:<input
             type="text"
             name="contacto"
             placeholder="email o número de contacto"
             value={formData.contacto}
             onChange={handleChange}
             required
-          />
+          /></label>
         </div>
         <div>
-          <label>Alergias:</label>
-          <input
+          <label>Alergias:<input
             type="text"
             name="alergias"
             placeholder="Preferencias alimenticias / alergias / intolerancias"
             value={formData.alergias}
             onChange={handleChange}
-          />
+          /></label>
         </div>
         <div>
-          <label>Alojamiento:</label>
-          <select
+          <label>Alojamiento:<select
             name="alojamiento"
             value={formData.alojamiento}
             onChange={handleChange}
           >
             <option value="si">Sí</option>
             <option value="no">No</option>
-          </select>
+          </select></label>
         </div>
         <div>
-          <label>Autobús:</label>
-          <select
+          <label>Autobús:<select
             name="autobus"
             value={formData.autobus}
             onChange={handleChange}
           >
             <option value="si">Sí</option>
             <option value="no">No</option>
-          </select>
+          </select></label>
         </div>
         <div>
           <div className="label-container">
-            <label>Domingo:</label>
+            <label>Domingo:
             <FontAwesomeIcon icon={faInfoCircle} style={{marginLeft: 6}}/>
             <span className="tooltip">
               <h3 className="h3-form">Weeding weekend</h3>
               <p>Desde el Complejo nos ofrecen una comida para el día siguiente de la boda.</p>
-              <p>2 entrantes + BBQ + Paella + Postre + Bebida -{'>'} 43€/persona (IVA no incluido)</p>
-            </span>
+              <p>2 entrantes + BBQ + Paella + Postre + Bebida -{'>'} <b>43€/persona</b> (IVA no incluido)</p>
+            </span></label>
           </div>
           <div className="select-container">
             <select name="domingo" value={formData.domingo} onChange={handleChange}>
@@ -158,37 +153,34 @@ const RSVP = () => {
             </select>
           </div>
         </div>
-        <button type="button" onClick={addAcompanante}>
+        <button type="button" className="button-rsvp" onClick={addAcompanante}>
           Añadir Acompañante
         </button>
         {formData.acompanantes.map((acompanante, index) => (
           <div className="acompanante-container" key={index}>
             <h4>Acompañante {index + 1}</h4>
             <div>
-              <label>Nombre y Apellidos:</label>
-              <input
+              <label>Nombre y Apellidos:<input
                 type="text"
                 name="nombre"
                 placeholder="Introduce tu nombre"
                 value={acompanante.nombre}
                 onChange={(e) => handleAcompananteChange(index, e)}
                 required
-              />
+              /></label>
             </div>
             <div>
-              <label>Alergias:</label>
-              <input
+              <label>Alergias:<input
                 type="text"
                 name="alergias"
                 placeholder="Preferencias alimenticias / alergias / intolerancias"
                 value={acompanante.alergias}
                 onChange={(e) => handleAcompananteChange(index, e)}
                 required
-              />
+              /></label>
             </div>
             <div>
-              <label>Menú:</label>
-              <select
+              <label>Menú:<select
                 name="menu"
                 value={acompanante.menu}
                 onChange={(e) => handleAcompananteChange(index, e)}
@@ -197,11 +189,11 @@ const RSVP = () => {
                 <option value="infantil">Infantil</option>
                 <option value="adulto">Adulto</option>
                 <option value="vegano">Vegano</option>
-              </select>
+              </select></label>
             </div>
           </div>
         ))}
-        <button className="button-submit" type="submit">
+        <button className="button-rsvp button-submit" type="submit">
           Enviar
         </button>
       </form>

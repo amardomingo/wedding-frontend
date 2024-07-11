@@ -17,14 +17,14 @@ body{
 }
 
 .title-text{
-  font-family: 'Sisterhood';
+  font-family: 'Sisterhood', sans-serif;
   font-size: 6rem;
   margin-top: 0;
   margin-bottom: 0;
 }
 
 .name-date{
-  font-family: 'BodoniflfRoman';
+  font-family: 'BodoniflfRoman', sans-serif;
   font-size: 2rem;
   margin-top: 0;
   margin-bottom: 0;

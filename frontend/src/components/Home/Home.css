@@ -8,22 +8,27 @@ body {
 }
 
 .home {
-	display: flex;
-	text-align: center;
+	display: grid;
+	gap: 20px;
+	grid-template-columns: 1fr 2fr;
 }
 
 .image img {
 	display: flex;
-	flex: 1;
-	margin: 20px 20px 20px 20px;
-	max-width: 50vw;
+	height: auto;
+	margin: 20px 0 20px 20px;
 	max-height: 70vh;
+	max-width: 50vw;
+}
+
+.content {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
 }
 
 .welcome-page {
-	border-radius: 8px;
-	flex: 1;
-	margin: 20px 20px 20px 20px;
 	max-width: 50vw;
 
 	h1 {
@@ -36,6 +41,12 @@ body {
 		font-size: 1.2rem;
 		margin: 1rem 0;
 	}
+}
+
+.details-buttons {
+	align-items: center;
+	justify-items: center;
+	padding-bottom: 2rem;
 
 	.accordion-button {
 		background: transparent;
@@ -45,7 +56,7 @@ body {
 		cursor: pointer;
 		margin-top: 20px;
 		transition: background-color 0.3s ease;
-		width: 92vw;
+		width: 35vw;
 	}
 
 	.faq-section {
@@ -61,8 +72,8 @@ body {
 		transition: max-height 0.6s ease;
 
 		a {
-			color: #FFD700;
 			border-radius: 4px;
+			color: #FFD700;
 			display: inline-block;
 			margin-top: 1rem;
 			text-decoration: none;
@@ -88,8 +99,8 @@ body {
 
 	.h3-home {
 		font-weight: bold;
-		margin-top: 10px;
 		margin-bottom: 5px;
+		margin-top: 10px;
 	}
 
 	.question-icon {
@@ -105,5 +116,82 @@ body {
 
 	.question-icon .rotate {
 		transform: rotate(45deg);
+	}
+}
+
+/* vertical mobile display */
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+	html {
+		overflow-x: hidden;
+		width: 100vw;
+
+		body {
+			overflow-x: hidden;
+		}
+	}
+
+	.home {
+		align-items: center;
+		gap: 10px;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+	}
+
+	.image,
+	.welcome-page,
+	.accordion-buttons {
+		grid-column: 1 / 2;
+	}
+
+	.image img {
+		align-items: center;
+		margin-left: 3vw;
+		margin-right: 3vw;
+		max-height: 90vh;
+		max-width: 95vh;
+		object-fit: contain;
+		padding-left: 1vw;
+		width: 90vw;
+	}
+
+	.welcome-page, .details-buttons {
+		align-items: center;
+		margin-left: 2vw;
+		max-width: 95vw;
+
+		.accordion-button {
+			margin-left: 2vw;
+			margin-right: 2vw;
+			width: 85vw;
+		}
+	}
+}
+
+/* horizontal mobile display */
+@media only screen and (max-height: 600px) and (orientation: landscape) {
+	.home {
+		gap: 10px;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto;
+	}
+
+	.image {
+		grid-column: 1 / 2;
+	}
+
+	.welcome-page {
+		grid-column: 2 / 2;
+	}
+
+	.details-buttons {
+		display: flex;
+		flex-wrap: wrap;
+		grid-row: 1 / 1;
+		justify-content: space-between;
+
+		.accordion-button {
+			flex: 1 1 45%;
+			margin: 10px;
+		}
 	}
 }
