@@ -1,4 +1,4 @@
-import { APIProvider, AdvancedMarker, Map, Pin, InfoWindow } from '@vis.gl/react-google-maps';
+import { APIProvider, AdvancedMarker, Map, Pin } from '@vis.gl/react-google-maps';
 import { useEffect, useState } from 'react';
 import './Location.css';
 import { API_KEY } from './secrets';

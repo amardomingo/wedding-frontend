@@ -3,55 +3,10 @@ div {
   text-align: center;
 }
 
-.h2-location {
-  text-align: center;
-  color: white;
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
-.h3-location {
-  text-align: center;
-  color: white;
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
 .block-celebration, .block-location {
-  margin: 20px 0;
   background-color: #323232;
   color: white;
-}
-
-p {
-  margin: 5px 0;
-}
-
-/* Mapa */
-.map {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 20px 0;
-}
-
-/* Contenedor para centrar todo */
-.center-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  background-color: #323232;
-}
-
-.location-text {
-  text-align: left;
-  flex-direction: column;
-  margin-left: 5vh;
 }
 
 .block-celebration {
@@ -62,17 +17,59 @@ p {
   text-align: left;
 }
 
-.map-container {
-  display: flex;
-  justify-content: center;
+.center-container {
   align-items: center;
-  width: 100%;
   background-color: #323232;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
 }
 
+.h2-location {
+  color: #FFD700;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.h3-location {
+  color: #FFD700;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.location-text {
+  flex-direction: column;
+  margin-left: 5vh;
+  text-align: left;
+}
+
+.map {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.map-container {
+  align-items: center;
+  background-color: #323232;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+p {
+  margin: 5px 0;
+}
 
 /* vertical mobile display */
-@media only screen and (max-width: 600px) and (orientation: portrait){
+@media only screen and (max-width: 600px) and (orientation: portrait) {
   .center-container {
     flex-direction: column;
   }
@@ -82,7 +79,7 @@ p {
 }
 
 /* horizontal mobile display */
-@media only screen and (max-height: 600px) and (orientation: landscape){
+@media only screen and (max-height: 600px) and (orientation: landscape) {
   .center-container {
     flex-direction: column;
   }

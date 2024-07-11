@@ -2,14 +2,14 @@
 .App {
   display: flex;
   flex-direction: column;
-  min-height: 85vh;
   font-size: 1.25rem;
+  min-height: 85vh;
 }
 
 /* Estilos para los componentes del contenido */
 .content {
-  padding: 2rem;
   color: white;
+  padding: 2rem;
 }
 
 /* Estilos responsivos */
