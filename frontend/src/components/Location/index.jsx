@@ -7,7 +7,7 @@ import {
 import React, { useEffect, useState } from 'react';
 
 import './Location.css';
-import { API_KEY } from './secrets';
+import API_KEY from './secrets';
 
 const styles = {
   container: (isPortrait) => ({
@@ -16,7 +16,7 @@ const styles = {
   }),
 };
 
-const Location = () => {
+function Location() {
   const mediaMatch = window.matchMedia(
     'only screen and (max-width: 600px) and (orientation: portrait)'
   );
@@ -56,29 +56,29 @@ const Location = () => {
       <div className="map-container">
         <APIProvider apiKey={API_KEY} libraries={['marker']}>
           <Map
-            mapId={'7b94c075e1a2dbef'}
+            mapId="7b94c075e1a2dbef"
             style={styles.container(matches)}
             defaultCenter={{ lat: 40.29219436645508, lng: -3.513371467590332 }}
             defaultZoom={14}
-            gestureHandling={'greedy'}
-            disableDefaultUI={true}
-            zoomControl={true}
+            gestureHandling="greedy"
+            disableDefaultUI
+            zoomControl
           >
             <AdvancedMarker
               position={{ lat: 40.29219436645508, lng: -3.513371467590332 }}
-              title={'AdvancedMarker with customized pin.'}
+              title="AdvancedMarker with customized pin."
             >
               <Pin
-                background={'#22ccff'}
-                borderColor={'#1e89a1'}
-                glyphColor={'#0f677a'}
-              ></Pin>
+                background="#22ccff"
+                borderColor="#1e89a1"
+                glyphColor="#0f677a"
+              />
             </AdvancedMarker>
           </Map>
         </APIProvider>
       </div>
     </div>
   );
-};
+}
 
 export default Location;

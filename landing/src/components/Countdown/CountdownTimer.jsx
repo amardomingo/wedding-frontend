@@ -1,30 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import DateTimeDisplay from './DateTimeDisplay';
-import { useCountdown } from './useCountdown';
+import DateTimeDisplay from './DateTimeDisplay.jsx';
+import useCountdown from './useCountdown.jsx';
 
-const ExpiredNotice = () => {
+function ExpiredNotice() {
   return (
     <div className="expired-notice">
       <h1>Llegado el día es!!!</h1>
     </div>
   );
-};
+}
 
-const ShowCounter = ({ days, hours, minutes, seconds }) => {
+function ShowCounter({ days, hours, minutes, seconds }) {
   return (
     <div className="show-counter">
-      <DateTimeDisplay value={days} type={'días'} />
+      <DateTimeDisplay value={days} type="días" />
       <p>-</p>
-      <DateTimeDisplay value={hours} type={'horas'} />
+      <DateTimeDisplay value={hours} type="horas" />
       <p>:</p>
-      <DateTimeDisplay value={minutes} type={'minutos'} />
+      <DateTimeDisplay value={minutes} type="minutos" />
       <p>:</p>
-      <DateTimeDisplay value={seconds} type={'segundos'} />
+      <DateTimeDisplay value={seconds} type="segundos" />
     </div>
   );
-};
+}
 
 ShowCounter.propTypes = {
   days: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
@@ -33,25 +33,24 @@ ShowCounter.propTypes = {
   seconds: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
 
-const CountdownTimer = ({ targetDate }) => {
+function CountdownTimer({ targetDate }) {
   const [days, hours, minutes, seconds] = useCountdown(targetDate);
 
   if (days + hours + minutes + seconds <= 0) {
     return <ExpiredNotice />;
-  } else {
-    return (
-      <ShowCounter
-        days={days}
-        hours={hours}
-        minutes={minutes}
-        seconds={seconds}
-      />
-    );
   }
-};
+  return (
+    <ShowCounter
+      days={days}
+      hours={hours}
+      minutes={minutes}
+      seconds={seconds}
+    />
+  );
+}
 
 CountdownTimer.propTypes = {
-  targetDate: PropTypes.string,
+  targetDate: PropTypes.instanceOf(Date).isRequired,
 };
 
 export default CountdownTimer;

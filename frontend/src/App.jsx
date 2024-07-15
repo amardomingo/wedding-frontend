@@ -9,22 +9,22 @@ import Rsvp from './components/RSVP';
 
 import './App.css';
 
-const App = () => {
+function App() {
   return (
     <>
       <main className="App">
         <BrowserRouter>
           <Navigation />
           <Routes>
-            <Route exac path={'/'} element={<Home />} />
-            <Route exac path={'/rsvp'} element={<Rsvp />} />
-            <Route exac path={'/location'} element={<Location />} />
+            <Route exac path="/" element={<Home />} />
+            <Route exac path="/rsvp" element={<Rsvp />} />
+            <Route exac path="/location" element={<Location />} />
           </Routes>
         </BrowserRouter>
       </main>
       <Footer />
     </>
   );
-};
+}
 
 export default App;

@@ -22,8 +22,31 @@
     "googleapis": "134.0.0"
   },
   "devDependencies": {
-    "@eslint/js": "9.6.0",
-    "eslint": "9.6.0",
-    "globals": "15.6.0"
+    "@eslint/eslintrc": "3.1.0",
+    "@eslint/js": "9.7.0",
+    "eslint": "8.57.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "globals": "15.8.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "es2020": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2020
+    },
+    "ignorePatterns": [
+      "/node_modules/"
+    ],
+    "extends": [
+      "airbnb-base"
+    ],
+    "rules": {
+      "import/extensions": [
+        "off",
+        "always"
+      ]
+    }
   }
 }

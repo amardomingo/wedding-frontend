@@ -25,18 +25,19 @@ export default function insertInvitado(invitadoInfo) {
       '', // Acompañante de
     ],
   ];
-  for (const acompanate of invitadoInfo.acompanantes) {
+  invitadoInfo.acompanantes.forEach((acompanante) => {
     data.push([
-      acompanate.nombre,
+      acompanante.nombre,
       '', // Contacto
       invitadoInfo.autobus,
       invitadoInfo.alojamiento,
-      acompanate.alergias === 'none' ? '' : acompanate.alergias,
-      acompanate.menu,
+      acompanante.alergias === 'none' ? '' : acompanante.alergias,
+      acompanante.menu,
       invitadoInfo.domingo,
-      invitadoInfo.nombre, // Acompanante de
+      invitadoInfo.nombre, // acompanante de
     ]);
-  }
+  });
+
   const endColumn = sheetColumns[data.length - 1];
   sheetClient.spreadsheets.values
     .append({

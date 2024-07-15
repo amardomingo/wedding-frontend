@@ -1,19 +1,28 @@
 .App {
-  text-align: center;
   max-height: 100vh;
   margin-top: 5vh;
   margin-bottom: 0;
+  text-align: center;
 }
 
 .save-date {
-  text-align: center;
   max-height: 100vh;
+  text-align: center;
 }
 
-body {
-  text-align: center;
-  background-color: #323232;
+body,
+a {
   color: white;
+  background-color: #323232;
+  text-align: center;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffffff; /* Blanco al pasar el ratón */
+  text-shadow:
+    0 0 5px #ffd700,
+    0 0 10px #ffd700; /* Efecto de resplandor dorado */
 }
 
 .title-text {
@@ -34,18 +43,21 @@ body {
 @media only screen and (max-width: 600px) and (orientation: portrait) {
   header {
     font-size: 2rem;
+    max-height: 0;
     text-align: center;
-    max-height: 0vh;
   }
+
   main {
     font-size: 1.2rem;
-    text-align: center;
     max-height: 80vh;
+    text-align: center;
   }
+
   footer {
-    text-align: end;
     max-height: 20vh;
+    text-align: end;
   }
+
   .show-counter {
     font-size: 0.85rem !important;
   }
@@ -54,23 +66,27 @@ body {
 /* horizontal mobile display */
 @media only screen and (max-height: 600px) and (orientation: landscape) {
   header {
+    max-height: 0;
     font-size: 2rem;
     text-align: center;
-    max-height: 0vh;
   }
+
   main {
+    max-height: 80vh;
     font-size: 1.2rem;
     text-align: center;
-    max-height: 80vh;
   }
+
   footer {
-    text-align: end;
     max-height: 20vh;
+    text-align: end;
   }
+
   .title-text {
     display: inline;
     margin-left: 10vh;
   }
+
   .App {
     margin-top: 2vh;
   }
