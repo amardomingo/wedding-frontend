@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 import React, { useState, useRef, useEffect } from 'react';
 
 import './Home.css';
-import weddingImage from './../../assets/home.jpeg';
-import preciosPDF from './../../assets/tarifas.pdf';
+import weddingImage from '../../assets/home.jpeg';
+import preciosPDF from '../../assets/tarifas.pdf';
 
-const Home = () => {
+function Home() {
   const [activeSections, setActiveSections] = useState({
     event: false,
     information: false,
@@ -53,6 +53,7 @@ const Home = () => {
         </div>
         <div className="details-buttons">
           <button
+            type="button"
             className={`accordion-button ${activeSections.event ? 'active' : ''}`}
             onClick={() => toggleAccordion('event')}
           >
@@ -63,16 +64,16 @@ const Home = () => {
                   icon={faPlus}
                   className={
                     activeSections.event
-                      ? `question-icon rotate`
-                      : `question-icon`
+                      ? 'question-icon rotate'
+                      : 'question-icon'
                   }
                 />
               </div>
               <div
                 className={
                   activeSections.event
-                    ? `accordion-content answer-divider`
-                    : `accordion-content`
+                    ? 'accordion-content answer-divider'
+                    : 'accordion-content'
                 }
                 ref={contentRefs.event}
               >
@@ -98,6 +99,7 @@ const Home = () => {
           </button>
 
           <button
+            type="button"
             className={`accordion-button ${activeSections.information ? 'active' : ''}`}
             onClick={() => toggleAccordion('information')}
           >
@@ -108,16 +110,16 @@ const Home = () => {
                   icon={faPlus}
                   className={
                     activeSections.information
-                      ? `question-icon rotate`
-                      : `question-icon`
+                      ? 'question-icon rotate'
+                      : 'question-icon'
                   }
                 />
               </div>
               <div
                 className={
                   activeSections.information
-                    ? `accordion-content answer-divider`
-                    : `accordion-content`
+                    ? 'accordion-content answer-divider'
+                    : 'accordion-content'
                 }
                 ref={contentRefs.information}
               >
@@ -125,7 +127,11 @@ const Home = () => {
                 <p>
                   En la propia finca hay disponible alojamiento (bungalows). Hay
                   más información en{' '}
-                  <Link to="https://www.complejolaciguena.com/bungalows-madrid/">
+                  <Link
+                    to="https://www.complejolaciguena.com/bungalows-madrid/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     su web
                   </Link>
                 </p>
@@ -162,6 +168,6 @@ const Home = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Home;

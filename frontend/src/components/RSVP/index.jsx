@@ -5,7 +5,7 @@ import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 import './RSVP.css';
 
-const RSVP = () => {
+function RSVP() {
   // Define state variables to hold form data
   const [formData, setFormData] = useState({
     nombre: '',
@@ -27,10 +27,10 @@ const RSVP = () => {
     });
   };
 
-  const handleAcompananteChange = (index, e) => {
+  const handleAcompananteChange = (aid, e) => {
     const { name, value } = e.target;
-    const newAcompanantes = formData.acompanantes.map((acompanante, i) => {
-      if (i === index) {
+    const newAcompanantes = formData.acompanantes.map((acompanante) => {
+      if (acompanante.id === aid) {
         return { ...acompanante, [name]: value };
       }
       return acompanante;
@@ -43,7 +43,12 @@ const RSVP = () => {
       ...formData,
       acompanantes: [
         ...formData.acompanantes,
-        { nombre: '', alergias: '', menu: 'infantil' },
+        {
+          nombre: '',
+          alergias: '',
+          menu: 'infantil',
+          id: formData.acompanantes.length + 1,
+        },
       ],
     });
   };
@@ -52,11 +57,10 @@ const RSVP = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // You can handle form submission here, e.g., send form data to server
-    const base_url = 'http://127.0.0.1:3001/rsvp';
+    const baseUrl = 'http://127.0.0.1:3001/rsvp';
     axios
-      .post(base_url, formData)
+      .post(baseUrl, formData)
       .then((response) => {
-        console.log(response);
         setModalContent(response.data.iban);
         setModalVisible(true);
         // redirección a log satisfactoriamente
@@ -89,9 +93,10 @@ const RSVP = () => {
       <h2 className="h2-form">Formulario de Asistencia</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>
+          <label htmlFor="nombreInput">
             Nombre y Apellidos:
             <input
+              id="nombreInput"
               type="text"
               name="nombre"
               placeholder="Introduce tu nombre y apellidos"
@@ -102,9 +107,10 @@ const RSVP = () => {
           </label>
         </div>
         <div>
-          <label>
+          <label htmlFor="contacto">
             Contacto:
             <input
+              id="contacto"
               type="text"
               name="contacto"
               placeholder="email o número de contacto"
@@ -115,9 +121,10 @@ const RSVP = () => {
           </label>
         </div>
         <div>
-          <label>
+          <label htmlFor="alergias">
             Alergias:
             <input
+              id="alergias"
               type="text"
               name="alergias"
               placeholder="Preferencias alimenticias / alergias / intolerancias"
@@ -127,9 +134,10 @@ const RSVP = () => {
           </label>
         </div>
         <div>
-          <label>
+          <label htmlFor="alojamiento">
             Alojamiento:
             <select
+              id="alojamiento"
               name="alojamiento"
               value={formData.alojamiento}
               onChange={handleChange}
@@ -140,9 +148,10 @@ const RSVP = () => {
           </label>
         </div>
         <div>
-          <label>
+          <label htmlFor="autobus">
             Autobús:
             <select
+              id="autobus"
               name="autobus"
               value={formData.autobus}
               onChange={handleChange}
@@ -154,10 +163,10 @@ const RSVP = () => {
         </div>
         <div>
           <div className="label-container">
-            <label>
+            <label htmlFor="domingo">
               Domingo:
               <FontAwesomeIcon icon={faInfoCircle} style={{ marginLeft: 6 }} />
-              <span className="tooltip">
+              <span id="domingo" className="tooltip">
                 <h3 className="h3-form">Weeding weekend</h3>
                 <p>
                   Desde el Complejo nos ofrecen una comida para el día siguiente
@@ -184,42 +193,48 @@ const RSVP = () => {
         <button type="button" className="button-rsvp" onClick={addAcompanante}>
           Añadir Acompañante
         </button>
-        {formData.acompanantes.map((acompanante, index) => (
-          <div className="acompanante-container" key={index}>
-            <h4>Acompañante {index + 1}</h4>
+        {formData.acompanantes.map((acompanante) => (
+          <div className="acompanante-container" key={acompanante.id}>
+            <h4>
+              Acompañante
+              {acompanante.id}
+            </h4>
             <div>
-              <label>
+              <label htmlFor="nombreInput">
                 Nombre y Apellidos:
                 <input
+                  id="nombreInput"
                   type="text"
                   name="nombre"
                   placeholder="Introduce tu nombre"
                   value={acompanante.nombre}
-                  onChange={(e) => handleAcompananteChange(index, e)}
+                  onChange={(e) => handleAcompananteChange(acompanante.id, e)}
                   required
                 />
               </label>
             </div>
             <div>
-              <label>
+              <label htmlFor="alergias">
                 Alergias:
                 <input
+                  id="alergias"
                   type="text"
                   name="alergias"
                   placeholder="Preferencias alimenticias / alergias / intolerancias"
                   value={acompanante.alergias}
-                  onChange={(e) => handleAcompananteChange(index, e)}
+                  onChange={(e) => handleAcompananteChange(acompanante.id, e)}
                   required
                 />
               </label>
             </div>
             <div>
-              <label>
+              <label htmlFor="menu">
                 Menú:
                 <select
+                  id="menu"
                   name="menu"
                   value={acompanante.menu}
-                  onChange={(e) => handleAcompananteChange(index, e)}
+                  onChange={(e) => handleAcompananteChange(acompanante.id, e)}
                   required
                 >
                   <option value="infantil">Infantil</option>
@@ -245,12 +260,14 @@ const RSVP = () => {
               </p>
               <p>{modalContent}</p>
             </div>
-            <button onClick={closeModal}>Cerrar</button>
+            <button type="button" onClick={closeModal}>
+              Cerrar
+            </button>
           </div>
         </div>
       )}
     </div>
   );
-};
+}
 
 export default RSVP;
