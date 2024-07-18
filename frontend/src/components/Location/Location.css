@@ -8,14 +8,12 @@ div {
   background-color: #323232;
   color: white;
   margin: 20px 0;
-}
-
-.block-celebration {
   text-align: left;
-}
 
-.block-location {
-  text-align: left;
+  p {
+    font-size: 1.25rem;
+    margin: 5px 0;
+  }
 }
 
 .center-container {
@@ -30,13 +28,7 @@ div {
   width: 100%;
 }
 
-.h2-location {
-  color: #ffd700;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
+.h2-location,
 .h3-location {
   color: #ffd700;
   font-weight: bold;
@@ -63,10 +55,6 @@ div {
   display: flex;
   justify-content: center;
   width: 100%;
-}
-
-p {
-  margin: 5px 0;
 }
 
 /* vertical mobile display */

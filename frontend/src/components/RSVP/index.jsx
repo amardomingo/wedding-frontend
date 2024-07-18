@@ -56,31 +56,30 @@ function RSVP() {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can handle form submission here, e.g., send form data to server
-    const baseUrl = 'http://127.0.0.1:3001/rsvp';
+    const baseUrl = `${import.meta.env.VITE_API_URL}`;
+    const message = `<p>Tus datos han sido recibidos correctamente.</p>
+    <p>
+      El mejor regalo es que paséis este día con nosotros, pero si aun
+      así queréis echarnos una mano, podéis hacerlo aquí:
+    </p>`;
     axios
       .post(baseUrl, formData)
       .then((response) => {
-        setModalContent(response.data.iban);
+        setModalContent(message + response.data.iban);
         setModalVisible(true);
-        // redirección a log satisfactoriamente
       })
-      .catch((error) => {
-        console.log(error.response);
+      .catch(() => {
         setModalContent('Ha ocurrido un error. Por favor, inténtalo de nuevo.');
         setModalVisible(true);
-        // redirección a un mensaje de error y que lo vuelva a intentar
       });
-    console.log(JSON.stringify(formData));
-    // Optionally, you can reset form fields after submission
     setFormData({
       nombre: '',
       contacto: '',
       acompanantes: [],
       alergias: '',
-      alojamiento: '',
-      autobus: '',
-      domingo: '',
+      alojamiento: 'no',
+      autobus: 'no',
+      domingo: 'no',
     });
   };
 
@@ -94,7 +93,7 @@ function RSVP() {
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="nombreInput">
-            Nombre y Apellidos:
+            Nombre y Apellidos:{' '}
             <input
               id="nombreInput"
               type="text"
@@ -108,7 +107,7 @@ function RSVP() {
         </div>
         <div>
           <label htmlFor="contacto">
-            Contacto:
+            Contacto:{' '}
             <input
               id="contacto"
               type="text"
@@ -122,7 +121,7 @@ function RSVP() {
         </div>
         <div>
           <label htmlFor="alergias">
-            Alergias:
+            Alergias:{' '}
             <input
               id="alergias"
               type="text"
@@ -135,7 +134,7 @@ function RSVP() {
         </div>
         <div>
           <label htmlFor="alojamiento">
-            Alojamiento:
+            Alojamiento:{' '}
             <select
               id="alojamiento"
               name="alojamiento"
@@ -149,7 +148,7 @@ function RSVP() {
         </div>
         <div>
           <label htmlFor="autobus">
-            Autobús:
+            Autobús:{' '}
             <select
               id="autobus"
               name="autobus"
@@ -164,7 +163,7 @@ function RSVP() {
         <div>
           <div className="label-container">
             <label htmlFor="domingo">
-              Domingo:
+              ¿Te quedas el domingo?:
               <FontAwesomeIcon icon={faInfoCircle} style={{ marginLeft: 6 }} />
               <span id="domingo" className="tooltip">
                 <h3 className="h3-form">Weeding weekend</h3>
@@ -190,18 +189,12 @@ function RSVP() {
             </select>
           </div>
         </div>
-        <button type="button" className="button-rsvp" onClick={addAcompanante}>
-          Añadir Acompañante
-        </button>
         {formData.acompanantes.map((acompanante) => (
           <div className="acompanante-container" key={acompanante.id}>
-            <h4>
-              Acompañante
-              {acompanante.id}
-            </h4>
+            <h4>Acompañante {acompanante.id}</h4>
             <div>
               <label htmlFor="nombreInput">
-                Nombre y Apellidos:
+                Nombre y Apellidos:{' '}
                 <input
                   id="nombreInput"
                   type="text"
@@ -215,7 +208,7 @@ function RSVP() {
             </div>
             <div>
               <label htmlFor="alergias">
-                Alergias:
+                Alergias:{' '}
                 <input
                   id="alergias"
                   type="text"
@@ -229,7 +222,7 @@ function RSVP() {
             </div>
             <div>
               <label htmlFor="menu">
-                Menú:
+                Menú:{' '}
                 <select
                   id="menu"
                   name="menu"
@@ -245,6 +238,9 @@ function RSVP() {
             </div>
           </div>
         ))}
+        <button type="button" className="button-rsvp" onClick={addAcompanante}>
+          Añadir Acompañante
+        </button>
         <button className="button-rsvp button-submit" type="submit">
           Enviar
         </button>
@@ -252,15 +248,15 @@ function RSVP() {
       {modalVisible && (
         <div className="modal-backdrop">
           <div className="modal">
-            <div className="modal-content">
-              <p>Tus datos han sido recibidos correctamente.</p>
-              <p>
-                El mejor regalo es que paséis este día con nosotros, pero si aún
-                así queréis echarnos una mano, podéis hacerlo aquí:
-              </p>
-              <p>{modalContent}</p>
-            </div>
-            <button type="button" onClick={closeModal}>
+            <div
+              className="modal-content"
+              dangerouslySetInnerHTML={{ __html: modalContent }}
+            />
+            <button
+              className="button-rsvp button-close"
+              type="button"
+              onClick={closeModal}
+            >
               Cerrar
             </button>
           </div>

@@ -26,7 +26,12 @@ export default [
     },
   },
   {
-    ignores: ['**/vite.config.js', '**/eslint.config.js', '**/node_modules/**'],
+    ignores: [
+      '**/vite.config.js',
+      '**/eslint.config.js',
+      '**/node_modules/**',
+      '**/dist/**',
+    ],
   },
   ...compat.extends('airbnb'),
   {
@@ -37,6 +42,7 @@ export default [
       'import/extensions': ['off', 'always'],
       'import/no-named-as-default': 'off',
       'import/no-named-as-default-member': 'off',
+      'react/no-danger': 'off',
     },
   },
 ];

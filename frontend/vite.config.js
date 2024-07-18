@@ -5,9 +5,11 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   plugins: [react()],
   build: {
+    target: 'esnext',
     rollupOptions: {
       output: {
         format: 'esm',
+        compact: true,
       },
     },
     commonjsOptions: {

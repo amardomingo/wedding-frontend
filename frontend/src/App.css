@@ -3,22 +3,5 @@
   display: flex;
   flex-direction: column;
   font-size: 1.25rem;
-  min-height: 85vh;
-}
-
-/* Estilos para los componentes del contenido */
-.content {
-  color: white;
-  padding: 2rem;
-}
-
-/* Estilos responsivos */
-@media (max-width: 576px) {
-  .content {
-    padding: 1rem;
-  }
-
-  footer {
-    padding: 0.5rem;
-  }
+  min-height: 80vh;
 }

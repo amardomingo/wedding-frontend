@@ -12,7 +12,7 @@ const sheetClient = google.sheets({
   auth: googleAuth,
 });
 
-export default function insertInvitado(invitadoInfo) {
+export default async function insertInvitado(invitadoInfo) {
   const data = [
     [
       invitadoInfo.nombre,
@@ -39,8 +39,8 @@ export default function insertInvitado(invitadoInfo) {
   });
 
   const endColumn = sheetColumns[data.length - 1];
-  sheetClient.spreadsheets.values
-    .append({
+  try {
+    const response = await sheetClient.spreadsheets.values.append({
       spreadsheetId: sheetID,
       range: `${tabName}!A:${endColumn}`,
       valueInputOption: 'USER_ENTERED',
@@ -49,6 +49,10 @@ export default function insertInvitado(invitadoInfo) {
         majorDimension: 'ROWS',
         values: data,
       },
-    })
-    .then((r) => console.log('Data insert correctly in sheet. %s', r));
+    });
+    console.log('Data insert correctly in sheet. %s', response);
+  } catch (error) {
+    console.error('Error inserting data into sheet:', error);
+    throw error;
+  }
 }
