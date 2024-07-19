@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import React, { useState, useRef, useEffect } from 'react';
 
 import './Home.css';
-import weddingImage from '../../assets/home.jpeg';
+import weddingImage from '../../assets/home.webp';
 import preciosPDF from '../../assets/tarifas.pdf';
 
 function Home() {
@@ -148,7 +148,7 @@ function Home() {
                     rel="noopener noreferrer"
                   >
                     aquí
-                  </a>
+                  </a>{' '}
                   .
                 </p>{' '}
                 <h3 className="h3-home">Planes de domingo</h3>

@@ -48,8 +48,8 @@ function Location() {
           <p>Salida 21 de la carretera A-3 en dirección Arganda del Rey</p>
           <h3 className="h3-location">En autobús</h3>
           <p>
-            Desde la plaza de Neptuno en Madrid saldrá un autobús hacia el
-            recinto a las 17h
+            Desde la zona de Atocha saldrá un autobús hacia el recinto sobre las
+            17h. Pondremos más información cuando concretemos con la empresa.
           </p>
         </div>
       </div>

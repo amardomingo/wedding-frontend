@@ -1,15 +1,18 @@
+html,
 body {
   background-color: #323232;
   color: white;
   font-family: 'BodoniflfRoman', sans-serif !important;
   height: 100vh;
   margin: 0;
+  overflow-x: hidden;
   padding: 0;
   width: 100vw;
   -moz-osx-font-smoothing: grayscale;
 }
 
 @font-face {
+  font-display: swap;
   font-family: 'BodoniflfRoman';
   src:
     local('BodoniflfRoman'),

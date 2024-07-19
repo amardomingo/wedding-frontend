@@ -16,10 +16,18 @@ app.get('/health', (req, res) => {
   res.end(JSON.stringify({ status: 'ok' }));
 });
 
-app.post('/rsvp', (req, res) => {
-  console.log(req.body);
-  insertInvitado(req.body);
-  res.end(JSON.stringify({ iban: IBAN, status: 'ok', error: '' }));
+app.post('/rsvp', async (req, res) => {
+  try {
+    await insertInvitado(req.body);
+    res.end(JSON.stringify({ iban: IBAN, status: 'ok' }));
+  } catch (error) {
+    console.error('Error processing request', error);
+    res.status(500).json({
+      iban: '',
+      error:
+        'Se ha producido un error, por favor intentalo en otro momento o ponte en contacto con nosotros',
+    });
+  }
 });
 
 app.listen(PORT, () => {

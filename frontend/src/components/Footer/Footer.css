@@ -5,7 +5,7 @@
   font-family: 'BodoniflfRoman', sans-serif;
   font-size: 1.3rem;
   font-weight: bold;
-  max-height: 10vh;
+  min-height: 20vh;
   padding: 1rem;
   text-align: center;
 
@@ -35,5 +35,12 @@
     &:nth-child(4) {
       font-size: 1rem;
     }
+  }
+}
+
+/* vertical mobile display */
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+  .footer {
+    padding: 0.5rem;
   }
 }
