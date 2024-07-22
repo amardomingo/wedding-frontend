@@ -63,7 +63,7 @@ function RSVP() {
       así queréis echarnos una mano, podéis hacerlo aquí:
     </p>`;
     axios
-      .post(baseUrl, formData)
+      .post(`${baseUrl}/rsvp`, formData)
       .then((response) => {
         setModalContent(message + response.data.iban);
         setModalVisible(true);
