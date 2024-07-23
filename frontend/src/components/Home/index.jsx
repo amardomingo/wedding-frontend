@@ -141,21 +141,24 @@ function Home() {
               ref={contentRefs.information}
             >
               <h3 className="h3-home">Alojamiento</h3>
+              <p>Si os interesa quedaros, marcarlo en el formulario. </p>
               <p>
-                En la propia finca hay disponible alojamiento (bungalows). Hay
-                más información en{' '}
+                En la propia finca hay disponible{' '}
                 <Link
                   to="https://www.complejolaciguena.com/bungalows-madrid/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  su web
+                  {' '}
+                  alojamiento (bungalows)
                 </Link>
-              </p>
-              <p>
-                Si os interesa quedaros, marcarlo en el formulario, tenéis un
-                10% de descuento por asistir a nuestra boda. Hemos reservado 10
-                bungalows que tenemos que confirmar antes de Septiembre.
+                aunque <span className="highlight">
+                  {' '}
+                  ya están casi llenos.
+                </span>{' '}
+                Aquí tenéis un 10% de descuento por asistir a nuestra boda.
+                Hemos reservado 10 bungalows que tenemos que confirmar antes de
+                Septiembre.
               </p>
               <p>
                 Los precios los tenéis disponibles{' '}
@@ -164,6 +167,21 @@ function Home() {
                 </a>{' '}
                 .
               </p>{' '}
+              <p>
+                En caso de que sean necesarios más alojamientos, estamos en
+                contacto con el{' '}
+                <Link
+                  to="https://www.hotel-bb.com/es/hotel/madrid-arganda?gps%5Bvalue%5D=40.3064291%2C-3.4471723&gps%5Bdistance%5D%5Bfrom%5D=10&bounds=%7B%22south%22%3A40.2892888%2C%22west%22%3A-3.4907462%2C%22north%22%3A40.3215092%2C%22east%22%3A-3.4251274%2C%22type%22%3A%22locality%22%7D&loc_country=ES&arrival_date=10%2F05%2F2024&departure_date=10%2F06%2F2024&destination=Arganda+del+Rey&internal_keywords=Arganda+del+Rey&viewport=1460x460&r1_ad=2&currency_code=EUR#rooms-block-scroll"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {' '}
+                  hotel B&B de Arganda del Rey.
+                </Link>{' '}
+                Pondremos un autobús para ir y volver del hotel al complejo.
+                Intentaremos negociar con ellos algún descuento en función de
+                cuantas habitaciones sean necesarias.
+              </p>
               <h3 className="h3-home">Planes de domingo</h3>
               <p>
                 Si habéis decidido quedaros a dormir, o si os va la marcha, el

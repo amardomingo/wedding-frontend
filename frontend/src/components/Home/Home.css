@@ -34,6 +34,12 @@
   }
 }
 
+.highlight {
+  color: #ffd700;
+  font-weight: bold;
+  padding: 2px;
+}
+
 .details-buttons {
   align-items: center;
   border: 1px solid #ffd700;
