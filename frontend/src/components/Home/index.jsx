@@ -151,7 +151,7 @@ function Home() {
                 >
                   {' '}
                   alojamiento (bungalows)
-                </Link>
+                </Link>{' '}
                 aunque <span className="highlight">
                   {' '}
                   ya están casi llenos.
