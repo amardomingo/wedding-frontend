@@ -47,10 +47,17 @@ function Location() {
           <h3 className="h3-location">En coche</h3>
           <p>Salida 21 de la carretera A-3 en dirección Arganda del Rey</p>
           <h3 className="h3-location">En autobús</h3>
-          <p>
-            Desde la zona de Atocha saldrá un autobús hacia el recinto sobre las
-            17h. Pondremos más información cuando concretemos con la empresa.
-          </p>
+          <ul>
+            <li>
+              Desde la zona de Atocha saldrá un autobús hacia el recinto sobre
+              las 17h.
+            </li>
+            <li>
+              Desde el complejo volverá a Atocha al final del evento o en
+              función de la gente que lo quiera veremos hora de retorno.
+            </li>
+          </ul>
+          <p>Pondremos más información cuando concretemos con la empresa.</p>
         </div>
       </div>
       <div className="map-container">
