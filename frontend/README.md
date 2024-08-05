@@ -1,8 +1,82 @@
-# React + Vite
+# My Wedding Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is the frontend for a wedding application, built using Vite and React. It utilizes various libraries for enhanced functionality and a better user experience.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Development](#development)
+  - [Production](#production)
+  - [Preview](#preview)
+  - [Testing](#testing)
+  - [Linting](#linting)
+- [Authors](#authors)
+- [License](#license)
+
+## Installation
+
+To install the necessary dependencies, run the following command:
+
+```bash
+npm install
+```
+
+## Usage
+
+### Development
+
+To start the development server, run:
+
+```bash
+npm run dev
+```
+
+### Production
+
+To build the project for production, run:
+
+```bash
+npm run build
+```
+
+### Preview
+
+To preview the production build, run:
+
+```bash
+npm run preview
+```
+
+### Testing
+
+To run the tests, use:
+
+```bash
+npm run test
+```
+
+To run the tests in watch mode:
+
+```bash
+npm run test:watch
+```
+
+### Linting
+
+To run ESLint and check for linting issues:
+
+```bash
+npm run lint
+```
+
+## Authors
+
+```text
+Sara Jimenez
+Alberto Mardomingo
+```
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE file](../LICENSE) for more details.
