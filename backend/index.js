@@ -30,6 +30,11 @@ app.post('/rsvp', async (req, res) => {
   }
 });
 
+app.get('/iban', (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
+  res.end(JSON.stringify({ iban: IBAN }));
+});
+
 app.listen(PORT, () => {
   console.log(`app is running on PORT ${PORT}`);
 });
