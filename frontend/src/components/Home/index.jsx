@@ -143,30 +143,15 @@ function Home() {
               <h3 className="h3-home">Alojamiento</h3>
               <p>Si os interesa quedaros, marcarlo en el formulario. </p>
               <p>
-                En la propia finca hay disponible{' '}
+                <span className="highlight">
+                  En la propia finca ya no queda alojamiento disponible.
+                </span>{' '}
                 <Link
                   to="https://www.complejolaciguena.com/bungalows-madrid/"
                   target="_blank"
                   rel="noopener noreferrer"
-                >
-                  {' '}
-                  alojamiento (bungalows)
-                </Link>{' '}
-                aunque <span className="highlight">
-                  {' '}
-                  ya están casi llenos.
-                </span>{' '}
-                Aquí tenéis un 10% de descuento por asistir a nuestra boda.
-                Hemos reservado 10 bungalows que tenemos que confirmar antes de
-                Septiembre.
+                ></Link>
               </p>
-              <p>
-                Los precios los tenéis disponibles{' '}
-                <a href={preciosPDF} target="_blank" rel="noopener noreferrer">
-                  aquí
-                </a>{' '}
-                .
-              </p>{' '}
               <p>
                 En caso de que sean necesarios más alojamientos, estamos en
                 contacto con el{' '}
